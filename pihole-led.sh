@@ -6,8 +6,8 @@ tail -f /var/log/pihole.log | while read INPUT
 do
    if [[ "$INPUT" == *"/etc/pihole/gravity.list"* ]]; then
        echo 0 | sudo tee /sys/class/leds/led0/brightness
-       sleep 0.2
+       sleep 0.1
        echo 1 | sudo tee /sys/class/leds/led0/brightness
-       sleep 0.2
+       sleep 0.1
     fi
 done
